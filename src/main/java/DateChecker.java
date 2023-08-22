@@ -18,10 +18,13 @@ public class DateChecker {
     }
 
     public boolean has31Days(Month month) {
-        return false;
+        return Arrays.asList(
+                Month.JANUARY,
+                Month.MARCH,
+                Month.MAY,
+                Month.JULY,
+                Month.AUGUST,
+                Month.OCTOBER,
+                Month.DECEMBER).contains(month);
     }
-
-    
-
-
 }
