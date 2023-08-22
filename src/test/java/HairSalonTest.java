@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assumptions.assumeTrue;
 
 class HairSalonTest {
 
@@ -36,4 +37,15 @@ class HairSalonTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    public void testApplyDiscount() {
+        Calculator calculator = new Calculator();
+        assumeTrue(calculator.divide(hairSalon.getHaircutPrice(), 2) == 15);
+
+        int expected = 20;
+
+        int actual = hairSalon.applyDiscount();
+
+        assertEquals(expected, actual);
+    }
 }
